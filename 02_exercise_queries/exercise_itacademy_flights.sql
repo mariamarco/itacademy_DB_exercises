@@ -5,15 +5,15 @@ FROM Flights;
 
 /* 2. Retard promig de sortida i arribada segons l’aeroport origen */
 SELECT Origin, 
-			AVG(ArrDelay) AS AverageArrivalDelay,  
-            AVG(DepDelay) AS AverageDepartureDelay 
+	AVG(ArrDelay) AS AverageArrivalDelay,  
+	AVG(DepDelay) AS AverageDepartureDelay 
 FROM Flights 
 GROUP BY Origin;
 
 
 /* 3. Retard promig d’arribada dels vols, per mesos i segons l’aeroport origen */
 SELECT Origin, colYear, colMonth, 
-			AVG(ArrDelay) AS AverageArrivalDelay 
+	AVG(ArrDelay) AS AverageArrivalDelay 
 FROM Flights 
 GROUP BY Origin, colYear, colMonth;
 
