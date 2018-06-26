@@ -22,7 +22,7 @@ GROUP BY Origin, colYear, colMonth;
 consulta que abans i amb el mateix ordre). Però a més, ara volen que en comptes
 del codi de l’aeroport es mostri el nom de la ciutat. */
 SELECT City, colYear, colMonth, 
-			AVG(ArrDelay) AS AverageArrivalDelay 
+	AVG(ArrDelay) AS AverageArrivalDelay 
 FROM Flights 
 INNER JOIN USAirports ON IATA = Origin
 GROUP BY Origin, colYear, colMonth;
